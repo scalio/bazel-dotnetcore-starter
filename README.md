@@ -8,6 +8,6 @@ Check out solutions for possible Windows issues here:
 https://github.com/scalio/bazel-dotnetcore-starter/wiki
 
 
-# Build
+# Build and run
 
-    bazel build //:bin
+    bazel run //:bin

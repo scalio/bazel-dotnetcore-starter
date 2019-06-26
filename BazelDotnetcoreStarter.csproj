@@ -1,8 +1,29 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp2.2</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="bazel-bazel-dotnetcore-starter\**" />
+      <Compile Remove="bazel-bin\**" />
+      <Compile Remove="bazel-genfiles\**" />
+      <Compile Remove="bazel-out\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="bazel-bazel-dotnetcore-starter\**" />
+      <EmbeddedResource Remove="bazel-bin\**" />
+      <EmbeddedResource Remove="bazel-genfiles\**" />
+      <EmbeddedResource Remove="bazel-out\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="bazel-bazel-dotnetcore-starter\**" />
+      <None Remove="bazel-bin\**" />
+      <None Remove="bazel-genfiles\**" />
+      <None Remove="bazel-out\**" />
+    </ItemGroup>
 
 </Project>

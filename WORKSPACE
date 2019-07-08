@@ -1,10 +1,16 @@
+workspace(
+    # How this workspace would be referenced with absolute labels from another workspace
+    name = "bazel_dotnetcore_starter",
+)
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # C# rules
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
-git_repository(
+http_archive(
     name = "io_bazel_rules_dotnet",
-    remote = "https://github.com/bazelbuild/rules_dotnet",
-    tag = "0.0.3",
+    sha256 = "3ba440608bedc4527239584c3958b5b6507839e2e617a6e0d0e974e300826f26",
+    strip_prefix = "rules_dotnet-0.0.3",
+    urls = ["https://github.com/bazelbuild/rules_dotnet/archive/0.0.3.tar.gz"],
 )
 
 # C# toolchain setup

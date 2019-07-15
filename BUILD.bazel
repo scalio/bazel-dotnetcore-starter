@@ -8,7 +8,7 @@ core_context_data(
 )
 
 
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "dotnet_binary")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library")
 
 core_binary(
     name = "bin",
@@ -22,3 +22,28 @@ core_binary(
     # visibility = ["//visibility:public"],
 )
 
+core_library(
+    name = "lib",
+    srcs = [
+        "Program.cs",
+    ],
+    deps = [
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+# bazel build //src:docker
+load(
+    "@io_bazel_rules_docker//container:container.bzl",
+    "container_image"
+)
+
+container_image(
+    name = "docker",
+    # References container_pull from WORKSPACE (above)
+    base = "@dotnet//image",
+    files = [":lib"],
+    entrypoint = ["dotnet", "lib.dll"]
+)

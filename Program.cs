@@ -1,12 +1,24 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace BazelDotnetcoreStarter
 {
+
+    class Greeting
+    {
+        public string Message { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            var greeting = new Greeting() { Message = "Hello world!" };
+
+            var jsonStr = JsonConvert.SerializeObject(greeting);
+
+            Utils.Print(jsonStr);
         }
     }
 }

@@ -12,8 +12,8 @@ load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "
 core_binary(
     name = "bin",
     srcs = [
-        "Program.cs",
-        "Utils.cs"
+        "App/Program.cs",
+        "App/Utils.cs"
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
@@ -27,7 +27,8 @@ core_binary(
 core_library(
     name = "lib",
     srcs = [
-        "Program.cs",
+        "App/Program.cs",
+        "App/Utils.cs"
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",

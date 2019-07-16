@@ -28,7 +28,7 @@ core_binary(
         "App/Utils.cs"
     ],
     deps = [
-        "utility",
+        ":utility",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",

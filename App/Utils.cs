@@ -1,6 +1,6 @@
 using System;
 
-namespace BazelDotnetcoreStarter
+namespace App
 {
     public class Utils
     {

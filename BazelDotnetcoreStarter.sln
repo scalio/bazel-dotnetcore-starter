@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazelDotnetcoreStarter", "BazelDotnetcoreStarter.csproj", "{97BA95DB-30C4-4BC1-BAB0-A38A7C5803AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App/App.csproj", "{97BA95DB-30C4-4BC1-BAB0-A38A7C5803AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

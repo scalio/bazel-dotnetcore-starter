@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace BazelDotnetcoreStarter
+namespace App
 {
 
     class Greeting

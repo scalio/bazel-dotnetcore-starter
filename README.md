@@ -10,4 +10,11 @@ https://github.com/scalio/bazel-dotnetcore-starter/wiki
 
 # Build and run
 
-    bazel run //:bin
+`bazel run //App:bin`
+
+# Build docker image
+
+`bazel run //App:docker`
+
+
+

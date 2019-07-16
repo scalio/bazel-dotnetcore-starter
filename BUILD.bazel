@@ -9,6 +9,18 @@ core_context_data(
 
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "dotnet_binary", "dotnet_import_library", "nuget_package")
 
+core_library(
+    name = "utility",
+    srcs = [
+        "Utility/Utility.cs"
+    ],
+    deps = [
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
+    ],
+    visibility = ["//visibility:public"],
+)
+
 core_binary(
     name = "bin",
     srcs = [
@@ -16,6 +28,7 @@ core_binary(
         "App/Utils.cs"
     ],
     deps = [
+        "utility",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",

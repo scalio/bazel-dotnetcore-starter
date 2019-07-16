@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using Utility;
 
 namespace App
 {
@@ -19,6 +20,8 @@ namespace App
             var jsonStr = JsonConvert.SerializeObject(greeting);
 
             Utils.Print(jsonStr);
+
+            Helper.Print(jsonStr);
         }
     }
 }

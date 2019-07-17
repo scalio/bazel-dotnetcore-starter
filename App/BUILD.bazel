@@ -16,11 +16,11 @@ core_binary(
         "Utils.cs"
     ],
     deps = [
-        "//Utility:utility",
+        "//Utility:utility",        
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
-        "@newtonsoft.json//:netcoreapp2.1_core",
+        "@newtonsoft.json//:core",
     ],
     # visibility = ["//visibility:public"],
 )
@@ -28,12 +28,15 @@ core_binary(
 core_library(
     name = "lib",
     srcs = [
-        "App/Program.cs",
-        "App/Utils.cs"
+        "Program.cs",
+        "Utils.cs"
     ],
     deps = [
+        "//Utility:utility",        
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
+        "@newtonsoft.json//:netcoreapp2.1_core",
     ],
     visibility = ["//visibility:public"],
 )

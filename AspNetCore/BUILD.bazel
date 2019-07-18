@@ -173,3 +173,27 @@ core_library(
     visibility = ["//visibility:public"],
 )
 
+# bazel build //AspNetCore:docker
+load(
+    "@io_bazel_rules_docker//container:container.bzl",
+    "container_image",
+    "container_push"
+)
+
+container_image(
+    name = "docker",
+    # References container_pull from WORKSPACE (above)
+    base = "@aspnetcore//image",
+    files = [":lib"],
+    entrypoint = ["dotnet", "lib.dll"]
+)
+
+# bazel run --define push_tag=${IMAGE_TAG} --define push_repository=${REPOSITORY} //AspNetCore:push_container
+container_push(
+    name = "push_container",
+    format = "Docker",
+    image = ":docker",
+    registry = "gcr.io",
+    repository = "$(push_repository)",
+    tag = "$(push_tag)",
+)

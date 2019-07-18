@@ -41,7 +41,7 @@ core_library(
     visibility = ["//visibility:public"],
 )
 
-# bazel build //src:docker
+# bazel build //App:docker
 load(
     "@io_bazel_rules_docker//container:container.bzl",
     "container_image",
@@ -56,7 +56,7 @@ container_image(
     entrypoint = ["dotnet", "lib.dll"]
 )
 
-# bazel run --define push_tag=${IMAGE_TAG} --define push_repository=${REPOSITORY} //src:push_container
+# bazel run --define push_tag=${IMAGE_TAG} --define push_repository=${REPOSITORY} //App:push_container
 container_push(
     name = "push_container",
     format = "Docker",

@@ -66,7 +66,13 @@ container_pull(
     name = "dotnet",
     registry = "mcr.microsoft.com",
     repository = "dotnet/core/runtime",
-    # 'tag' is also supported, but digest is encouraged for reproducibility.
+    tag = "2.2",
+)
+
+container_pull(
+    name = "aspnetcore",
+    registry = "mcr.microsoft.com",
+    repository = "dotnet/core/aspnet",
     tag = "2.2",
 )
 

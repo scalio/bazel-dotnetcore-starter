@@ -21,11 +21,11 @@ https://github.com/scalio/bazel-dotnetcore-starter/wiki
 
 `bazel run --define push_tag=${IMAGE_TAG} --define push_repository=${REPOSITORY} //App:push_container`
 
-# Build asp dotnet core app
+# Build asp net core app
 
 `bazel build //AspNetCore:dll`
 
-# Build docker image for asp dotnet core console app
+# Build docker image for asp net core app
 
 ## Build image
 

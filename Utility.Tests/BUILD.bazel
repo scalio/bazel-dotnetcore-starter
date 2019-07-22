@@ -1,0 +1,17 @@
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_context_data", "core_xunit_test")
+
+core_xunit_test(
+    name = "test",
+    size = "small",
+    srcs = [
+        "UtilityTest.cs",
+    ],
+    data = [
+        "//Utility:utility",
+    ],
+    dotnet_context_data = "@io_bazel_rules_dotnet//:core_context_data",
+    testlauncher = "@xunit//:xunit.console",
+    deps = [
+        "@xunit//:xunit.core"
+    ],
+)

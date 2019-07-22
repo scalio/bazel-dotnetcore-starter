@@ -16,7 +16,7 @@ core_binary(
         "Utils.cs"
     ],
     deps = [
-        "//Utility:utility",
+        "//Utility:utility",        
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
@@ -28,20 +28,24 @@ core_binary(
 core_library(
     name = "lib",
     srcs = [
-        "App/Program.cs",
-        "App/Utils.cs"
+        "Program.cs",
+        "Utils.cs"
     ],
     deps = [
+        "//Utility:utility",        
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
+        "@newtonsoft.json//:netcoreapp2.1_core",
     ],
     visibility = ["//visibility:public"],
 )
 
-# bazel build //src:docker
+# bazel build //App:docker
 load(
     "@io_bazel_rules_docker//container:container.bzl",
-    "container_image"
+    "container_image",
+    "container_push"
 )
 
 container_image(
@@ -50,4 +54,14 @@ container_image(
     base = "@dotnet//image",
     files = [":lib"],
     entrypoint = ["dotnet", "lib.dll"]
+)
+
+# bazel run --define push_tag=${IMAGE_TAG} --define push_repository=${REPOSITORY} //App:push_container
+container_push(
+    name = "push_container",
+    format = "Docker",
+    image = ":docker",
+    registry = "gcr.io",
+    repository = "$(push_repository)",
+    tag = "$(push_tag)",
 )

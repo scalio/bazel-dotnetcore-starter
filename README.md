@@ -1,4 +1,4 @@
-# Bazel Dotnet/Core Starter
+# Bazel Dotnet-Core Starter
 Bazel build for C# starter project
 
 # Issues

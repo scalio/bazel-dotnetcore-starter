@@ -39,14 +39,12 @@ https://github.com/scalio/bazel-dotnetcore-starter/wiki
 
 Created by [@baio](https://github.com/baio/), [@siberex](https://github.com/siberex/) @ [Scalio](https://scal.io/)
 
-<!-- markdownlint-disable -->
+
+## About us
 <p align="center">
     <br/>
-    <br/>
-    <br/>
     <a href="https://scal.io/">
-        <img src="readme-assets/scalio.png"/>
+        <img src="https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-logo.svg?sanitize=true" />
     </a>
+    <br/>
 </p>
-<!-- markdownlint-restore -->
-

@@ -1,6 +1,12 @@
-# Bazel Dotnet-Core Starter
-Bazel build for C# starter project
+![Bazel at Scalio](https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-bdn.svg?sanitize=true)
 
+<h1 align="center">Bazel Dotnet-Core Starter</h1>
+
+<p align="center">
+  A starter app made using C# -- built <b>using <a href="https://bazel.build/">Bazel</a></b>
+</p>
+
+&nbsp;
 # Issues
 
 Check out solutions for possible Windows issues here:

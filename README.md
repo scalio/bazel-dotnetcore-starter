@@ -3,7 +3,7 @@
 <h1 align="center">Bazel Dotnet-Core Starter</h1>
 
 <p align="center">
-  A starter app made using C# -- built <b>using <a href="https://bazel.build/">Bazel</a></b>
+  A starter app written in C# -- built <b>using <a href="https://bazel.build/">Bazel</a></b>
 </p>
 
 &nbsp;

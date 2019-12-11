@@ -1,4 +1,4 @@
-![Bazel at Scalio](https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-bdn.svg?sanitize=true)
+![Bazel at Scalio](https://raw.githubusercontent.com/scalio/bazel/master/assets/scalio-bdn.svg?sanitize=true)
 
 <h1 align="center">Bazel Dotnet-Core Starter</h1>
 
@@ -50,7 +50,7 @@ Created by [@baio](https://github.com/baio/), [@siberex](https://github.com/sibe
 <p align="center">
     <br/>
     <a href="https://scal.io/">
-        <img src="https://raw.githubusercontent.com/scalio/bazel-status/master/assets/scalio-logo.svg?sanitize=true" />
+        <img src="https://raw.githubusercontent.com/scalio/bazel/master/assets/scalio-logo.svg?sanitize=true" />
     </a>
     <br/>
 </p>

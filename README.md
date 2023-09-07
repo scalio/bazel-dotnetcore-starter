@@ -14,7 +14,9 @@ Check out solutions for possible Windows issues here:
 <a href="https://github.com/scalio/bazel-dotnetcore-starter/wiki">
     https://github.com/scalio/bazel-dotnetcore-starter/wiki
  </a>
- <br/>
+<br/>
+<br/>
+
 # Build and run dotnet core console app
 
 `bazel run //App:bin`
